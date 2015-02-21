@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map For Heartbeat
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+checkSerial	KEYWORD2
+sendByte	KEYWORD2
+sendInt	KEYWORD2
+sendString	KEYWORD2
+sendHeartbeat	KEYWORD2
+sendMonitor	KEYWORD2
+
+#######################################
+# Setup and Loop functions (KEYWORD3)
+#######################################
+Heartbeat	KEYWORD3
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+WAIT_IDENTIFIER	LITERAL1
+WAIT_LENGTH	LITERAL1
+WAIT_MESSAGE	LITERAL1
+
+#######################################
+# Built-in variables (LITERAL2)
+#######################################
