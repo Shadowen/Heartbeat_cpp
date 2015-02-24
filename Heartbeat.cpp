@@ -6,7 +6,6 @@ Heartbeat_class Heartbeat;
 Heartbeat_class::Heartbeat_class():
 	serialState(WAIT_IDENTIFIER)
 {
-	Serial.begin(9600);
 }
 
 Heartbeat_class::~Heartbeat_class()
@@ -15,6 +14,7 @@ Heartbeat_class::~Heartbeat_class()
 
 void Heartbeat_class::begin(void (*callback)(byte, byte, void*))
 {
+	Serial.begin(9600);
 	parseData_callback = callback;
 }
 

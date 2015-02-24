@@ -29,6 +29,11 @@ public:
 	
 	void checkSerial();
 
+	inline void write(const byte& data)
+	{
+		Serial.write(data);
+	}
+	
 	void sendByte(const byte& id, const byte& data);
 	void sendInt(const byte& id, const int& data);
 	void sendString(const byte& id, const String& data);
