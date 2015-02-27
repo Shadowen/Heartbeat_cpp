@@ -33,9 +33,14 @@ public:
 	{
 		Serial.write(data);
 	}
+
+	inline void write(const short& data)
+	{
+		Serial.write(data << 8);
+		Serial.write(data);
+	}
 	
 	void sendByte(const byte& id, const byte& data);
-	void sendInt(const byte& id, const int& data);
 	void sendString(const byte& id, const String& data);
 	
 	void sendHeartbeat();

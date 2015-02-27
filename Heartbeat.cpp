@@ -62,7 +62,7 @@ void Heartbeat_class::checkSerial(){
 }
 
 void Heartbeat_class::sendMonitor(String text){
-  sendString(0, text);
+  sendString(1, text);
 }
 
 void Heartbeat_class::sendHeartbeat(){
@@ -75,13 +75,6 @@ void Heartbeat_class::sendByte(const byte& id, const byte& data)
   Serial.write(id);
   Serial.write(1);
   Serial.write(data);	
-}
-
-void Heartbeat_class::sendInt(const byte& id, const int& data)
-{
-  Serial.write(id);
-  Serial.write(4);
-  Serial.write(data);
 }
 
 void Heartbeat_class::sendString(const byte& id, const String& data){
