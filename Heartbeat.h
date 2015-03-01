@@ -1,8 +1,16 @@
 #ifndef HEARTBEAT
 #define HEARTBEAT
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include <SoftwareSerial.h>
+
+// Returns the free ram space
+static inline int freeRam () 
+{
+  extern int __heap_start, *__brkval; 
+  int v;
+  return (int) &v - (__brkval == 0 ? (int) &__heap_start : (int) __brkval); 
+}
 
 class Heartbeat_class
 {
