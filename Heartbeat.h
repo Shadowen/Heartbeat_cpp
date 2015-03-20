@@ -2,7 +2,6 @@
 #define HEARTBEAT
 
 #include <Arduino.h>
-#include <SoftwareSerial.h>
 
 // Returns the free ram space
 static inline int freeRam () 
@@ -39,6 +38,12 @@ public:
 
 	inline void write(const byte& data)
 	{
+		Serial.write(data);
+	}
+	
+	inline void writeShort(const short& data)
+	{
+		Serial.write(data >> 8);
 		Serial.write(data);
 	}
 	

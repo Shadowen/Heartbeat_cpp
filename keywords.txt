@@ -12,9 +12,8 @@
 #######################################
 begin	KEYWORD2
 checkSerial	KEYWORD2
-sendByte	KEYWORD2
-sendInt	KEYWORD2
-sendString	KEYWORD2
+write	KEYWORD2
+writeShort	KEYWORD2
 sendHeartbeat	KEYWORD2
 sendMonitor	KEYWORD2
 
